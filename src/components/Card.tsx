@@ -1,6 +1,4 @@
-import React from 'react';
 import "../App.scss"
-import imageToAdd from "./../illu.png";
 import CSS from "csstype";
 
 

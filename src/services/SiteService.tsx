@@ -3,14 +3,14 @@ import { useHttps } from './../hook/http.hooks';
 
 const useSiteService = () =>{
   const _apiBase = "https://logiclike.com/docs/courses.json"
-  const {loading,request,error,clearError} = useHttps();
+  const {loading,request,error} = useHttps();
 
 
   const getAllTopics = async () => {
     let currentTags:string[] = [];
     const res = await request(`${_apiBase}`);
    
-    res.map(function(value){
+    res.map(function(value:any){
       currentTags = [...currentTags, ...value.tags]  
       currentTags = [...new Set(currentTags)]
   })

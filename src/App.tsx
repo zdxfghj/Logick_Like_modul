@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import Card from './components/Card';
+import { useEffect, useState } from 'react';
 import Sidebar from './components/Sidebar';
 import './App.scss';
 import useSiteService from './services/SiteService';
@@ -22,17 +21,17 @@ function App() {
 
 
   useEffect(() => {
+    const onRequest = (initial:boolean) => {
+      initial ? setNewItemLoading(false) : setNewItemLoading(true);
+      getAllTopics().then((value:string[])=>{
+        setArrayTopic(value);
+        addToStateArrayCards(null)
+      })    
+  }
     onRequest(true);
 }, [])
 
-const onRequest = (initial:boolean) => {
-    initial ? setNewItemLoading(false) : setNewItemLoading(true);
-    getAllTopics().then((value:string[])=>{
-      setArrayTopic(value);
-      addToStateArrayCards(null)
-    })
-        
-}
+
 
 const addToStateArrayCards = async(item:string | null) =>{
   setArrayCards( await getCardsOfTopic(item))
