@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+  display: flex;
+}
+
+body{
+  background-color: beige;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.cards{
+
+.card{
+    width: 13.125rem;
+    height: 13.125rem;
+    border-radius: 1rem;
+    background-color: white;
+    margin: 1rem;
+    box-shadow: 0px 10px 13px  #23235F30;
+    img{
+      width: 13.125rem;
+      height: 10.125rem;
+      border-top-right-radius: 1.125rem;
+      border-top-left-radius: 1.125rem;
+    }
+    .item_card{
+     h3{
+      text-align: left;
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+      font-family:  "Nunito", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.125rem;
+      font-weight: 800;
+      color: #39414b;
+     }
+    }
+}
+  
+}
+
+.sidebar{
+  width: 16.5rem;
+  min-height: 14.625rem;
+  border-radius: 1.125rem;
+  border: 1px solid #CFCFE4;
+  padding: .75rem;
+  height: 100%;
+  .is_active{
+    background-color: #5FBF77;
+    color: #ffffff;
+  }
+  .item_sidebar{
+    width: 13.875rem;
+    height: 42px;
+    border-radius: .75rem;
+    border: none;
+    
+    
+   
+    h3{
+      text-align: left;
+      margin: 0px;
+      font-family:  "Nunito", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.125rem;
+      font-weight: 800;
+      padding: 12px;
+      
+    }
+  }
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
